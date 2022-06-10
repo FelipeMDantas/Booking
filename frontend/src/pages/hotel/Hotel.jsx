@@ -12,18 +12,23 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useState } from "react";
 import useFetch from "../../hooks/useFetch";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { SearchContext } from "../../context/SearchContext";
+import { AuthContext } from "../../context/AuthContext";
+import Reserve from "../../components/reserve/Reserve";
 
 const Hotel = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
   const [slideIndex, setSlideIndex] = useState(0);
   const [openSlider, setOpenSlider] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const { data, loading, error } = useFetch(
     `http://localhost:8800/api/hotels/find/${id}`
   );
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const { dates, options } = useContext(SearchContext);
 
@@ -34,7 +39,7 @@ const Hotel = () => {
     return diffDays;
   }
 
-  const days = (dayDifference(dates[0].endDate, dates[0].startDate));
+  const days = dayDifference(dates[0].endDate, dates[0].startDate);
 
   const handleOpening = (i) => {
     setSlideIndex(i);
@@ -51,6 +56,14 @@ const Hotel = () => {
     }
 
     setSlideIndex(newSlideIndex);
+  };
+
+  const handleClick = () => {
+    if (user) {
+      setOpenModal(true);
+    } else {
+      navigate("/login");
+    }
   };
 
   return (
@@ -126,9 +139,10 @@ const Hotel = () => {
                   excellent location score of 9.8!
                 </span>
                 <h2>
-                  <b>${days * data.cheapestPrice * options.room}</b> ({days} nights)
+                  <b>${days * data.cheapestPrice * options.room}</b> ({days}{" "}
+                  nights)
                 </h2>
-                <button>Reserve or Book Now!</button>
+                <button onClick={handleClick}>Reserve or Book Now!</button>
               </div>
             </div>
           </div>
@@ -136,6 +150,7 @@ const Hotel = () => {
           <Footer />
         </div>
       )}
+      {openModal && <Reserve setOpen={setOpenModal} hotelId={id} />}
     </div>
   );
 };
