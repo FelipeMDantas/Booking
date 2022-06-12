@@ -24,9 +24,11 @@ mongoose.connection.on("disconnected", () => {
   console.log("MongoDB disconnected!");
 });
 
+const whitelist = ["http://localhost:3000", "http://localhost:3001"]
+
 //middlewares
 
-app.use(cors({ origin: "http://localhost:3000", methods: "GET" }));
+app.use(cors({ origin: whitelist, methods: "GET,PUT,DELETE" }));
 
 app.use(cookieParser());
 app.use(express.json());
