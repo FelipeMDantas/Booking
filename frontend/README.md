@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Booking (FrontEnd)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## A Booking.com clone that connects to and retrieves data from a cloud-based Mongo database. 
 
-## Available Scripts
+![Felipe|Booking](https://img.shields.io/badge/FelipeMDantas-Booking-blue)
 
-In the project directory, you can run:
+<p>
 
-### `npm start`
+![ReactJS](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Mongo](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+>Booking is a software that allows its users to search for hotel rooms to reserve.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Authentication
+- Data validation
+- Sign In
+- Sign Up
+- Authentication persistence via localStorage
+- Hotel rooms information display
+- Custom search filters
+- Dynamic price calculation: (amount of nights * (room price + specifications))
+- Room options exhibition, selection, and reservation - the latter action makes the room unavailable for new bookings for the relevant period.
 
-### `npm run build`
+## Tech
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A couple of technologies were employed in this project. Among them:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [ReactJS] - A JavaScript library for building user interfaces
+- [MongoDB] - a NoSQL source-available cross-platform document-oriented database program
+- [CSS] - describes how elements should be rendered on screen
+- [React Router DOM] - DOM bindings for React Router
+- [Font Awesome] - an icon library and toolkit
+- [react-date-range] - a date library for choosing dates and date ranges
+- [date-fns] - toolset for manipulating JavaScript dates
+- [Axios] - a promise-based HTTP Client for NodeJS and the browser
+- [Yarn] - a package manager
+- [Prettier] - a code formatter
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    [ReactJS]: https://reactjs.org/
+    [MongoDB]: https://www.mongodb.com/
+    [CSS]: https://developer.mozilla.org/en-US/docs/Web/CSS
+    [React Router DOM]: https://reactrouter.com/
+    [Font Awesome]: https://fontawesome.com/
+    [react-date-range]: https://github.com/hypeserver/react-date-range
+    [date-fns]: https://date-fns.org/
+    [Axios]: https://axios-http.com/docs/intro
+    [Yarn]: https://yarnpkg.com/
+    [Prettier]: https://prettier.io/

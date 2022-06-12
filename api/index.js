@@ -24,7 +24,7 @@ mongoose.connection.on("disconnected", () => {
   console.log("MongoDB disconnected!");
 });
 
-const whitelist = ["http://localhost:3000", "http://localhost:3001"]
+const whitelist = ["http://localhost:3000", "http://localhost:3001"];
 
 //middlewares
 
